@@ -30,3 +30,8 @@ export const Container = styled.div`
 `;
 
 
+export const Spacer = styled.div`
+    height: 14vh;
+    background: #77e68c;
+`;
+
