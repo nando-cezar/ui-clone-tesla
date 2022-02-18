@@ -10,7 +10,7 @@
 UI Clone tesla site.
 
 <p align="center">
-  <img src="https://github.com/nando-cezar/repository-img/blob/master/ui-clone-tesla-2.PNG">
+  <img src="https://github.com/nando-cezar/repository-img/blob/master/ui-clone-tesla2.PNG">
 </p>
 
 ## Technology | Language :books:
