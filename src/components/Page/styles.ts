@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     .colored:nth-child(1) {
-        background: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/088d64b2-afcc-43c6-9fa1-8f37e567a3d0/bvlatuR/std/2880x2400/desktop_model_3_v2");
+        background: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/da705069-91b5-41cb-86f3-86a585c6fdf3/bvlatuR/std/2880x1800/MX-Hero-Desktop");
         background-position: center;
         background-size: cover;
     }
     .colored:nth-child(2) {
-        background: #dfffd9;
+        background: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/56cb8c41-e898-44ce-b6b7-fe9b9a05f529/bvlatuR/std/2880x1800/MS-Social");
+        background-position: center;
+        background-size: cover;
     }
     .colored:nth-child(3) {
         background: #cdfeca;
