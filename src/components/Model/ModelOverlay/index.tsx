@@ -14,10 +14,12 @@ type SectionDimensions = Pick<HTMLDivElement, 'offsetTop' | 'offsetHeight'>
 
 const ModelOverlay: React.FC<Props> = ({ model, children }) => {
 
+  const { scrollY } = useWrapperScroll();
+
   const getSectionDimensions = useCallback(() => {
     return {
-      offsetTop: model.sectionRef.current?.offsetTop,
-      offsetHeight: model.sectionRef.current?.offsetHeight
+      offsetTop: model.sectionRef.current?.offsetTop ?? 0,
+      offsetHeight: model.sectionRef.current?.offsetHeight ?? 0
     } as SectionDimensions
   }, [model.sectionRef]);
 
@@ -35,10 +37,8 @@ const ModelOverlay: React.FC<Props> = ({ model, children }) => {
     return () => window.removeEventListener('resize', onResize);
   }, [getSectionDimensions]);
 
-  const { scrollY } = useWrapperScroll();
-
   const sectionScrollProgress = useTransform(
-    scrollY, y => (y - dimensions.offsetTop) / dimensions.offsetHeight
+    scrollY, (y: number) => (y - dimensions.offsetTop) / dimensions.offsetHeight
     );
 
   const opacity = useTransform(

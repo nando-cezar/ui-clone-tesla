@@ -7,8 +7,8 @@ export default function useWrapperScroll() {
 
     const { wrapperRef } = useContext(ModelsContext);
 
-    const scrollY = useMotionValue(0);
-    const scrollYProgress = useMotionValue(0);
+    const scrollY = useMotionValue<number>(0);
+    const scrollYProgress = useMotionValue<number>(0);
 
     useEffect(() => {
         const element = wrapperRef.current;
